@@ -1,0 +1,125 @@
+(configuración)
+N0010 G54 G71 G90 G94 M03 S1200 T0101
+(posiciono la herramienta en zona segura)
+N0015 G00 X0.0 Y0.0 Z50.0
+(bajo un poquito la herramienta)
+N0020 G00 Z10.0
+(posiciono el cortador en la esquina inferior izquierda de la E)
+N0030 G00 X10.0 Y10.0
+(comienzo a maquinar primer perforación)
+N0035 G01 Z-0.5 F80
+(subo por la | de la E)
+N0040 G01 Y70.0 F80
+(me muevo por la --- superior de la E)
+N0050 G01 X30.0 F80
+(retirar la pieza)
+N0060 G01 Z10.0 F400
+(me posiciono a la mitad de la E)
+N0070 G00 Y40.0
+(comienzo a cortar profundidad)
+N0075 G01 Z-0.5 F80
+(comienzo a cortar por la mitad --- y llego a la |)
+N0080 G01 X10.0 F80
+(retirar la pieza)
+N0085 G01 Z10.0 F400
+(me muevo a la esquina inferior derecha de la E)
+N0090 G00 X30.0 Y10.0
+(perforar)
+N0100 G01 Z-0.5 F80
+(me muevo a la izquierda)
+N0105 G01 X10.0 F80
+(== termino la letra E ==)
+(retiro el cortador)
+N0110 G01 Z10.0 F400 
+(lo posiciono en la zona segura)
+N0115 G00 X0.0 Y0.0 Z50.0
+(configuración no. 2)
+N0120  M04 S1150 T0202
+(== comienzo la letra I ==)
+(posiciono el cortador en la esquina inferior izquierda de la I)
+N0130 G00 X40.0 Y10.0
+(bajo el cortador y perforo)
+N0135 G01 Z-1.0 F90
+(empiezo a maquinar la parte inferior ____ de la I)
+N0140 G01 X60.0 F90
+(saco el cortador )
+N0150  G01 Z10.0 F400
+(y lo posiciono en el centro de la I)
+N0160 G00 X50.0
+(bajo la herramienta)
+N0170 G01 Z-1.0 F90
+(subo por el centro de la I)
+N0180 G01 Y70.0 F90
+(sacar el cortador de la I)
+N0190 Z10.0 F400
+(posiciono en la esquina superior derecha de la I)
+N0200 G00 X60.0
+(perforo)
+N0205 G01 Z-1.0 F90
+(corte superior <--- de la I)
+N0210 G01 X40.0 F90
+(== termino la letra I ==)
+(retiro el cortador)
+N0215 G01 Z10.0 F400
+(lo posiciono en la zona segura)
+N020 G00 X0.0 Y0.0 Z50.0
+(configuración no. 3)
+N0230  M03 S1110 T0303
+(== comienzo la letra B ==)
+(posiciono en la izquierda superior de la B)
+N0240 G00 X70.0 Y70.0 
+(bajo el cortador en Z)
+N0245 G01 Z-1.5 F100
+(bajo la letra B)
+N0250 G01 Y10.0 F100
+(recorro la parte inferior __ de la B)
+N0255 G01 X80.0 F100
+(hago el redondeo de la B inferior----------)
+N0260 G03 X90.0 Y20.0 I0.0 J10.0 F100
+(subo 10 mm en Y)
+N0270 G01 Y30.0 F100
+(hago el otro redondeo de la B inferior - parte superior)
+N0275 G03 X80.0 Y40.0 I-10.0 J0.0 F100
+(recorro la parte de enmedio __ de la B)
+N0280 G01 X70.0 F100
+(saco el cortador)
+N0290 G01 Z10.0 F400
+(me regreso al centro de la raya de la B)
+N0300 G00 X80.0 
+(bajo el cortador)
+N0310 G01 Z-1.5 F100
+(repito mismo procedimiento para redondear)
+(hago el redondeo de la B superior - SUPERIOR)
+N0320 G03 X90.0 Y50.0 I0.0 J10.0 F100
+(N0340 SACO CORTADOR)
+(subo 10 mm en Y)
+N0330 G01 Y60.0 F100
+(hago el otro redondeo de la B superior - parte superior)
+N0340 G03 X80.0 Y70.0 I-10.0 J0.0 F100
+(termino con la raya superior de la B)
+N0350 G01 X70.0 F100
+(== termino la letra B ==)
+(retiro el cortador)
+N0360 G01 Z10.0 F400
+(lo posiciono en la zona segura)
+N0370 G00 X0.0 Y0.0 Z50.0
+(configuración no. 4)
+N0380  M04 S1050 T0303
+(== comienzo la letra MM ==)
+(lo muevo a la esquina inferior de la M)
+N0390 G00 X100.0 Y10.0
+(introduzco el cortador en la M inferior izquierda)
+N0400 G01 Z-2.0 F110
+(subo por la | izquierda de la  M)
+N0410 G01 Y70.0 F100
+(bajo por la diagonal de la  M)
+N0420 G01 X110.0 Y45.0 F110
+(subo por la diagonal de la  M)
+N0430 G01 X120.0 Y70.0 F110
+(bajo por la | derecha de la  M)
+N0440 G01 Y10.0 F110
+(== termino la letra M ==)
+(retiro el cortador hasta z=100)
+N0450 G01 Z100.0 F400
+(paro el husillo y termino el programa)
+N0460 M05 M30
